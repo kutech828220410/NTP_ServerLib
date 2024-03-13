@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTP_ServerLib", "NTP_ServerLib.csproj", "{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5624117E-0A4F-49D2-AD20-AFE7E2AD84EE}
+	EndGlobalSection
+EndGlobal
