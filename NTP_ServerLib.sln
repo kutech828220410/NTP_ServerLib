@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTP_ServerLib", "NTP_ServerLib.csproj", "{37B3669B-618D-46BE-9F16-EE9CC57A6DB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTPSetlocalTime", "test\NTPSetlocalTime.csproj", "{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTPSetlocalTime", "NTPSetlocalTime\NTPSetlocalTime.csproj", "{4B91CC3C-35B8-48C3-9BEA-88DAD5D64B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
-
+using Basic;
 namespace NTP_ServerLib
 {
     public class NTPServerClass
@@ -17,7 +17,7 @@ namespace NTP_ServerLib
             {
                 // NTP服务端地址
                 string ntpServer = $"{server}";
-
+                Logger.Log($"ntpServer : {ntpServer}");
                 // NTP message size - 16 bytes of the digest (RFC 2030)
                 byte[] ntpData = new byte[48];
                 // Setting the Leap Indicator, Version Number and Mode values
@@ -54,6 +54,9 @@ namespace NTP_ServerLib
                 string localTime = DateTime.Now.ToString("yyyyMMddHHmmss");
                 // Local time
                 DateTime dt = webTime.ToLocalTime();
+                Logger.Log($"localTime : {localTime}");
+                Logger.Log($"webTime : {webTime.ToDateTimeString()}");
+
                 SyncTime(dt);
 
             }
@@ -124,6 +127,7 @@ namespace NTP_ServerLib
                 sysTime.wHour = Convert.ToUInt16(currentTime.Hour);
 
                 SetLocalTime(ref sysTime);//设置本机时间
+                Logger.Log($"SetLocalTime : {sysTime}");
                 flag = true;
             }
             catch (Exception)

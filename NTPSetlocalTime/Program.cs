@@ -16,7 +16,7 @@ namespace test
         public class DBConfigClass
         {
             private string name = "";
-            private string server_ip = "127.0.0.1";
+            private string server_ip = "http://127.0.0.1:4433";
             public string Name { get => name; set => name = value; }
             public string Server_ip { get => server_ip; set => server_ip = value; }
         }
@@ -60,8 +60,22 @@ namespace test
         static void Main(string[] args)
         {
             LoadDBConfig();
-            NTPServerClass nTPServerClass = new NTPServerClass();
-            nTPServerClass.getWebTime(dBConfigClass.Server_ip);
+            Logger.LogAddLine();
+            Logger.Log($"url :" + $"{dBConfigClass.Server_ip}/api/time");
+            string json = Basic.Net.WEBApiGet($"{dBConfigClass.Server_ip}/api/time");
+            Logger.Log($"json :" + $"{json}");
+            if(json.Check_Date_String() == false)
+            {
+                Logger.Log($"傳回字串為非法時間");
+                return;
+            }
+            DateTime dateTime = json.StringToDateTime();
+            NTPServerClass.SyncTime(dateTime);
+            Logger.LogAddLine();
+            //NTPServerClass nTPServerClass = new NTPServerClass();
+            //nTPServerClass.getWebTime(dBConfigClass.Server_ip);
+
+
         }
     }
 }
